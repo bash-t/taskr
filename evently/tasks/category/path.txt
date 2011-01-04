@@ -1,1 +1,1 @@
-/category/:cat
+/category/:name

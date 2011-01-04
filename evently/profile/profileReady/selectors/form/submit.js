@@ -4,9 +4,12 @@ function() {
   var form = $(this);
   var texta = $("textarea[name=body]", this);
   var cat = $("select[name=category]", this);
+  var severity = $("select[name=severity]", this);
   var newTask = {
     body : texta.val(),
     category : cat.val(),
+    severity : severity.val(),
+    state : "new",
     type : "task",
     created_at : new Date(),
     authorProfile : profile

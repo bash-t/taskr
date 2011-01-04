@@ -9,7 +9,9 @@ function(r) {
     futon_path : "/_utils/document.html?"+[app.db.name,r.id].map(encodeURIComponent).join('/'),
     id : encodeURIComponent(r.id),
     state : v.state,
-    created_at : $.prettyDate(v.created_at)
+    created_at : $.prettyDate(v.created_at),
+    category : v.category,
+    severity : v.severity
     // todo this should be handled in dom-land / evently
     // we can use this id as a handle for automatically updating non-top rows
     // based on changes from documents

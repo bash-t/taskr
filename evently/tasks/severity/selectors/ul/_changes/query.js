@@ -1,7 +1,7 @@
 function(e) {
   var params = e.data.args[1];
   return {
-    view : "category-cloud",
+    view : "severity-cloud",
     limit : 25,
     startkey : [params.name, {}],
     endkey : [params.name],

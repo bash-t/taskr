@@ -9,13 +9,15 @@ $.couch.app(function(app) {
   // this is the same thing, but for a cloud of usernames
   $("#usercloud").evently("usercloud", app);
   
+  $("#severitycloud").evently("severitycloud", app);
+  
   // we customize the profile widget in our evently directory but also 
   // we use code from vendor/couchapp/evently
   // evently knows about this and it just works.
   $("#profile").evently("profile", app);
   
   // setup the account widget
-  $("#account").evently("account", app);  
+  $("#account").evently("account", app);
   
   // trigger the profile widget's events corresponding to the account widget
   $.evently.connect($("#account"), $("#profile"), ["loggedIn", "loggedOut"]);
@@ -27,6 +29,7 @@ $.couch.app(function(app) {
   tasks.mentions = $.extend(true, {}, tasks.recent, tasks.mentions);
   tasks.users = $.extend(true, {}, tasks.recent, tasks.users);
   tasks.category = $.extend(true, {}, tasks.recent, tasks.category);
+  tasks.severity = $.extend(true, {}, tasks.recent, tasks.severity);
   
   $("#tasks").evently(tasks, app);
   $.pathbinder.onChange(function(path) {
