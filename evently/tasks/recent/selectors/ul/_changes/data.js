@@ -12,7 +12,7 @@ function(r) {
     created_at : $.prettyDate(v.created_at),
     category : v.category,
     severity : v.severity,
-    nr: v.nr
+    nr : v.nr
     // todo this should be handled in dom-land / evently
     // we can use this id as a handle for automatically updating non-top rows
     // based on changes from documents
