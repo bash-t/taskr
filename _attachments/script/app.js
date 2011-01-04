@@ -7,8 +7,9 @@ $.couch.app(function(app) {
   $("#tagcloud").evently("tagcloud", app);
   
   // this is the same thing, but for a cloud of usernames
-  $("#usercloud").evently("usercloud", app);
+  $("#usermentioncloud").evently("usermentioncloud", app);
   
+  $("#usercloud").evently("usercloud", app);
   $("#severitycloud").evently("severitycloud", app);
   $("#statecloud").evently("statecloud", app);
   

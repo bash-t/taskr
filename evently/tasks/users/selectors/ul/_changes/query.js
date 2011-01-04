@@ -6,6 +6,7 @@ function(e) {
     startkey : [params.name, {}],
     endkey : [params.name],
     descending : true,
+    reduce : false,
     type : "newRows"
   }
 }
