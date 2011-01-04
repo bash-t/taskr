@@ -10,6 +10,7 @@ $.couch.app(function(app) {
   $("#usercloud").evently("usercloud", app);
   
   $("#severitycloud").evently("severitycloud", app);
+  $("#statecloud").evently("statecloud", app);
   
   // we customize the profile widget in our evently directory but also 
   // we use code from vendor/couchapp/evently
@@ -30,6 +31,7 @@ $.couch.app(function(app) {
   tasks.users = $.extend(true, {}, tasks.recent, tasks.users);
   tasks.category = $.extend(true, {}, tasks.recent, tasks.category);
   tasks.severity = $.extend(true, {}, tasks.recent, tasks.severity);
+  tasks.state = $.extend(true, {}, tasks.recent, tasks.state);
   
   $("#tasks").evently(tasks, app);
   $.pathbinder.onChange(function(path) {
