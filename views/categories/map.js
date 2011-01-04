@@ -1,5 +1,5 @@
 function(doc) {
   if (doc.type == "task" && doc.state != "done") {
-    emit(doc.created_at, doc)
+    emit([doc.category, doc.created_at], doc);
   }
 }

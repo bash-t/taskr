@@ -26,6 +26,7 @@ $.couch.app(function(app) {
   tasks.tags = $.extend(true, {}, tasks.recent, tasks.tags);
   tasks.mentions = $.extend(true, {}, tasks.recent, tasks.mentions);
   tasks.users = $.extend(true, {}, tasks.recent, tasks.users);
+  tasks.category = $.extend(true, {}, tasks.recent, tasks.category);
   
   $("#tasks").evently(tasks, app);
   $.pathbinder.onChange(function(path) {

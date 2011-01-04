@@ -4,9 +4,17 @@
     {{nickname}}
   </div>
 </div>
-<form>
+  <br>
+<form id="frm_addTicket">
+  <label>Category</label>
+  <select name="category">
+    <option value="bug">Bug</option>
+    <option value="feature">Feature</option>
+    <option value="todo">ToDo</option>
+  </select><br>
+  <label>Description</label>
   <textarea name="body" cols="80" rows="3"></textarea>
   <br>
-  <input type="submit" value="New Task →">
+  <input type="submit" value="New Ticket →">
 </form>
 <br class="clear">
