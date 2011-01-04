@@ -4,11 +4,11 @@
     <br/>
     <a class="name" href="#/users/{{{name_uri}}}">{{name}}</a>
   </div>
-  <div class="header"><i>category:</i> <a class="name" href="#/category/{{{category}}}">{{{category}}}</a> | <i>severity:</i> <a class="name" href="#/severity/{{{severity}}}">{{{severity}}}</a></div>
+  <div class="header"><span>category: <a class="name" href="#/category/{{{category}}}">{{{category}}}</a> | severity: <a class="name" href="#/severity/{{{severity}}}">{{{severity}}}</a> | state: <a class="name" href="#/state/{{{state}}}">{{{state}}}</a></span></div>
   <div class="body">{{{body}}}</div>
   <div class="react">
     <!-- replies need a better browsing interface. turned off for now. <a href="#reply">reply</a> -->
-    <a href="#done">done!</a>
+    <span>Change state to: <a href="#new">new</a> | <a href="#accept">accept</a> | <a href="#reject">reject</a> | <a href="#inProgress">in progress</a> | <a href="#done">done!</a></span>
     <a target="_blank" href="{{{futon_path}}}">&#8618;</a>
     <span class="date">{{created_at}}</span>
   </div>

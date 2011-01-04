@@ -86,12 +86,32 @@ div#profile {
   border: 1px solid #4b4;
 }
 
+#tasks li.new, #tasks li.new:hover {
+  background-color:#afb;
+  border: 1px solid #4b4;
+}
+
+#tasks li.accept, #tasks li.accept:hover {
+  background-color:#bfb;
+  border: 1px solid #4b4;
+}
+
+#tasks li.reject, #tasks li.reject:hover {
+  background-color:#dfb;
+  border: 1px solid #4b4;
+}
+
+#tasks li.inprogress, #tasks li.inprogress:hover {
+  background-color:#efb;
+  border: 1px solid #4b4;
+}
+
 #tasks li .body {
   padding:8px;
   padding-bottom:0;
 }
 
-#tasks li .react a, #tasks li .react span {
+#tasks li .react a, #tasks li .react span, #tasks li .header a, #tasks li .header span {
   color:#fff;
   padding:0 4px;
   font-size:0.78em;
