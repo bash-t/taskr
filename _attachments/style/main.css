@@ -86,7 +86,7 @@ div#profile {
   border: 1px solid #4b4;
 }
 
-#tasks li.new, #tasks li.new:hover {
+/*#tasks li.new, #tasks li.new:hover {
   background-color:#afb;
   border: 1px solid #4b4;
 }
@@ -104,7 +104,7 @@ div#profile {
 #tasks li.inprogress, #tasks li.inprogress:hover {
   background-color:#efb;
   border: 1px solid #4b4;
-}
+}*/
 
 #tasks li .body {
   padding:8px;

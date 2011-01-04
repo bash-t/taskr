@@ -9,7 +9,7 @@ function() {
       doc.progressed_at = new Date();
       app.db.saveDoc(doc, {
         success : function() {
-          li.addClass("inprogress");
+          //li.addClass("inprogress");
         }
       });
     }

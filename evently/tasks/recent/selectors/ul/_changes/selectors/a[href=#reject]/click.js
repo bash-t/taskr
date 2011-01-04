@@ -9,7 +9,7 @@ function() {
       doc.rejected_at = new Date();
       app.db.saveDoc(doc, {
         success : function() {
-          li.addClass("reject");
+          //li.addClass("reject");
         }
       });
     }
