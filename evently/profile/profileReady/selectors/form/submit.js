@@ -1,14 +1,15 @@
 function() {
+  var form = $(this);
   var profile = $$("#profile").profile;
-  //$.log("profile", profile, this);
-  var db = $$(this).app.db;
+  var app = $$(this).app;
+  var texta = $("textarea[name=body]", this);
+  var cat = $("select[name=category]", this);
+  var severity = $("select[name=severity]", this);
+  var ddocname = app.ddoc._id.split('/')[1];
+  
   //determine the incremental number for the task
-  db.view(db.name+"/max-task-id", {
+  app.db.view(ddocname + "/max-task-id", {
     success : function(result) {
-      var form = $(this);
-        var texta = $("textarea[name=body]", this);
-        var cat = $("select[name=category]", this);
-        var severity = $("select[name=severity]", this);
         var newTask = {
           nr : result.rows[0].value + 1,
           body : texta.val(),
@@ -21,7 +22,7 @@ function() {
         };
         // works because app is attached all the way down
         // maybe we need a better way to support shared state?
-        db.saveDoc(newTask, {
+        app.db.saveDoc(newTask, {
           success : function() {
             form[0].reset();
           }
