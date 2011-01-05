@@ -149,27 +149,27 @@ div.avatar img {
   height : 40px;
 }
 
-#addTicket {
-  width: 700px;
-}
-
-#frm_addTicket {
+.frm_addTicket {
   padding: 5px 0 8px 155px;
 }
-#frm_addTicket label {
+.frm_addTicket label {
   float: left;
   margin-left: -155px;
   width: 150px;
 }
-#frm_addTicket input[type="text"],
-#frm_addTicket textarea {
+.frm_addTicket input[type="text"],
+.frm_addTicket textarea {
   width:400px;
 }
 
-#frm_addTicket textarea {
+.frm_addTicket textarea {
   height:100px;
 }
 
-#frm_addTicket select {
+.frm_addTicket select {
   width:150px;
+}
+
+div.ticketSearch form input {
+  width: 30px;
 }

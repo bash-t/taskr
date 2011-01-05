@@ -12,6 +12,7 @@ $.couch.app(function(app) {
   $("#usercloud").evently("usercloud", app);
   $("#severitycloud").evently("severitycloud", app);
   $("#statecloud").evently("statecloud", app);
+  $("#ticketSearch").evently("ticketSearch", app);
   
   // we customize the profile widget in our evently directory but also 
   // we use code from vendor/couchapp/evently
@@ -33,6 +34,7 @@ $.couch.app(function(app) {
   tasks.category = $.extend(true, {}, tasks.recent, tasks.category);
   tasks.severity = $.extend(true, {}, tasks.recent, tasks.severity);
   tasks.state = $.extend(true, {}, tasks.recent, tasks.state);
+  tasks.ticket = $.extend(true, {}, tasks.recent, tasks.ticket);
   
   $("#tasks").evently(tasks, app);
   $.pathbinder.onChange(function(path) {
@@ -50,5 +52,7 @@ $.linkify = function(body) {
     return '<a href="#/mentions/'+encodeURIComponent(name)+'">'+user+'</a>';
   }).replace(/\#([\w\-\.]+)/g,function(word,tag) {
     return '<a href="#/tags/'+encodeURIComponent(tag)+'">'+word+'</a>';
+  }).replace(/\§([\d]+)/g,function(ticketId,id) {
+    return '<a href="#/ticket/'+encodeURIComponent(id)+'">'+ticketId+'</a>';
   });
 };
